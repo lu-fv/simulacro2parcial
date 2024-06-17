@@ -26,6 +26,7 @@ public class Aeropuertos implements Serializable {
     }
 
     public Aeropuertos(String _id,boolean activo, String balance, String imagen, Integer capacidad, String nombre, String email, String phone, String direccion, String acerca, String fecha_inicio, Double latitud, Double longitud, List<Etiqueta> etiquetas, List<Aviones> aviones) {
+        this._id = _id;
         this.activo = activo;
         this.balance = balance;
         this.imagen = imagen;
@@ -42,9 +43,6 @@ public class Aeropuertos implements Serializable {
         this.aviones = aviones;
     }
 
-    public String get_Id() {
-        return _id;
-    }
 
     public boolean isActivo() {
         return activo;

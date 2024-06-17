@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
          TransporteAereo transporteAereo = new TransporteAereo("parcial.json");
+        transporteAereo.getAlist();
          transporteAereo.ShowJson();
 
     //   List<Aeropuertos> a = transporteAereo.listaPorCapacidad(30);

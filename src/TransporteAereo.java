@@ -19,7 +19,7 @@ public class TransporteAereo {
 
     public TransporteAereo(String pathname) {
         this.pathname = pathname;
-        this.LeerJson();  // levanta json y guarda en lista
+      //  this.LeerJson();  // levanta json y guarda en lista
 
     }
 
@@ -86,6 +86,7 @@ public class TransporteAereo {
     }
 
     public List<Aeropuertos> getAlist() {
+       this.LeerJson();
         return Alist;
     }
 
