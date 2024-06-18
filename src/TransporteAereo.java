@@ -19,7 +19,7 @@ public class TransporteAereo {
 
     public TransporteAereo(String pathname) {
         this.pathname = pathname;
-      //  this.LeerJson();  // levanta json y guarda en lista
+        //  this.LeerJson();  // levanta json y guarda en lista
 
     }
 
@@ -36,6 +36,7 @@ public class TransporteAereo {
         }
 
     }
+
     private void guardarEnJson() {
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -86,26 +87,66 @@ public class TransporteAereo {
     }
 
     public List<Aeropuertos> getAlist() {
-       this.LeerJson();
+        this.LeerJson();
         return Alist;
     }
 
-    public void AgregarAvion(Aviones avion, String nombreAeropuerto) {
-        try {
-            for (Aeropuertos a : Alist) {
+    /*  public void AgregarAvion(Aviones avion, String nombreAeropuerto) {
+
+          for (Aeropuertos a : Alist) {
+              try {
+                  if (a.getNombre().trim().equals(nombreAeropuerto.trim())) {
+                      a.getAviones().add(avion);
+                      ShowJson();
+                  } else {
+                      throw new InvalidObjectException(" no exist ese aeropuerto ");
+                  }
+
+              } catch (InvalidObjectException e) {
+                  e.printStackTrace();
+              } finally {
+                  guardarEnJson();
+              }
+
+          }
+      }*/
+    public Aeropuertos AgregarAvion(Aviones avion, String nombreAeropuerto) {
+
+        for (Aeropuertos a : Alist) {
+            try {
                 if (a.getNombre().trim().equals(nombreAeropuerto.trim())) {
                     a.getAviones().add(avion);
+                    System.out.println(a);
+                    return a;
                 } else {
-                    throw new InvalidObjectException(" no exist ese aeropuerto ");
+                    throw new InvalidObjectException(" ESTE NO ES ");
                 }
+
+            } catch (InvalidObjectException e) {
+                e.printStackTrace();
+            } finally {
+                guardarEnJson();
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            guardarEnJson();
         }
+        return null;
+    }
 
+    public Aeropuertos SearchAeroport(String aeroport) {
+
+        for (Aeropuertos a : getAlist()) {
+            try {
+                if (a.getNombre().trim().equals(aeroport.trim())) {
+                    System.out.println(a.ToStringName());
+                    return a;
+                } else {
+                    System.out.println(" no se encontro el aeropuerto buscado ");
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
 
     }
 }

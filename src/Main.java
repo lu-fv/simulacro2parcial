@@ -35,11 +35,17 @@ public class Main {
         System.out.println(" RECUPERAR ");
         System.out.println(arrayPyT.recuperar(0));
 
-        System.out.println(" PASAR List a HashMap ");
+        System.out.println(" PASAR List a HashSet ");
         System.out.println(arrayPyT.HashSetTags());
 
-        Aviones avion1 = new Aviones(6," Matias", 40);
-        transporteAereo.AgregarAvion( avion1, "JIMBIES");
+        System.out.println( " se agrega piloto ");
+        Aviones avion2 = new Aviones(3,"Lucia", 31);
+        transporteAereo.AgregarAvion( avion2, "JIMBIES");
+        Aviones avion1 = new Aviones(3,"Matias", 30);
+        transporteAereo.AgregarAvion( avion1, "AVIT");
+       // transporteAereo.ShowJson();
+
+        transporteAereo.SearchAeroport( "RAMJOB ");
 
     }
 }

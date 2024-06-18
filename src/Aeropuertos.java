@@ -162,7 +162,7 @@ public class Aeropuertos implements Serializable {
 
     @Override
     public String toString() {
-        return "Aeropuertos{" +
+        return "Aeropuertos{" +"\n" +
                 "id=" + _id +
                 ", activo=" + activo +
                 ", balance=" + balance +
@@ -178,7 +178,7 @@ public class Aeropuertos implements Serializable {
                 ", longitud=" + longitud +
                 ", etiquetas=" + etiquetas +
                 ", avionesList=" + aviones +
-                '}';
+                '}' +"\n";
     }
 
     public String ToStringName (){
