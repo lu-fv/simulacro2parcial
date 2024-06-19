@@ -32,8 +32,12 @@
         "id": 2,
         "piloto": "Aimee Mccullough",
         "capacidad_pasajeros": 34
+      },
+      {
+        "id": 3,
+        "piloto": "Lucia",
+        "capacidad_pasajeros": 31
       }
-
     ]
   },
   {
@@ -105,6 +109,11 @@
         "id": 2,
         "piloto": "Marks Valdez",
         "capacidad_pasajeros": 37
+      },
+      {
+        "id": 3,
+        "piloto": "Matias",
+        "capacidad_pasajeros": 30
       }
     ]
   },

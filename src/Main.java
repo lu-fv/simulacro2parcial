@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-         TransporteAereo transporteAereo = new TransporteAereo("parcial.json");
+     /*    TransporteAereo transporteAereo = new TransporteAereo("parcial.json");
         transporteAereo.getAlist();
          transporteAereo.ShowJson();
 
@@ -45,7 +45,16 @@ public class Main {
         transporteAereo.AgregarAvion( avion1, "AVIT");
        // transporteAereo.ShowJson();
 
-        transporteAereo.SearchAeroport( "RAMJOB ");
+        transporteAereo.SearchAeroport( "RAMJOB ");*/
+        friends f = new friends();
+       People p = new People("generated.json");
+        p.GetAlist();
+        p.ShowJson();
+        p.ListGender();
+        p.ShowListGender();
 
+        p.ListFriends();
+        System.out.println(" HASHMAP - NOMBRE->COLOR OJOS ");
+        p.ShowFriends();
     }
 }
